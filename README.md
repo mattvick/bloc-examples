@@ -25,6 +25,6 @@ You can do that on your own machine or a VM using our Developer Edition: https:/
 
 ### Instructions
   1. Run `npm install`
-  2. Open `config.yaml` and put in the appropriate `stratoUrl` and `blocUrl`. If you are running [strato-gettin-started](https://github.com/blockapps/strato-getting-started), then the appropriate values are alread in place.
+  2. Open `config.yaml` and put in the appropriate `stratoUrl` and `blocUrl`. If you are running [strato-getting-started](https://github.com/blockapps/strato-getting-started), then the appropriate values are alread in place.
   3. Execute `node <name-of-js-file>.js  --config config.yaml` to run any of the examples.
   
