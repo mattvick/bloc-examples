@@ -7,8 +7,8 @@ const nodepath = require('path');
  * effect of calling the method.
  */
 
- var blocUrl = 'http://$SERVER_URL$:8000'; //same url of our bloc-server used in config.yaml
- var stratoUrl = 'http://$SERVER_URL$:80'; //url of the strato instance that is running the blockchain, same as in config.yaml
+var blocUrl = 'http://localhost/bloc/v2.1'; //same url of our bloc-server used in config.yaml
+var stratoUrl = 'http://localhost/strato-api'; //url of the strato instance that is running the blockchain, same as in config.yaml
 
 
 /**

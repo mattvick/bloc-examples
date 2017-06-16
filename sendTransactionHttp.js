@@ -5,17 +5,17 @@ const rp = require('request-promise');
  */
 
 //$SERVER_URL$
-var blocUrl = '$SERVER_URL$'; //same url of our bloc-server used in config.yaml
-var stratoUrl = '$SERVER_URL$'; //url of the strato instance that is running the blockchain, same as in config.yaml
+var blocUrl = 'http://localhost/bloc/v2.1'; //same url of our bloc-server used in config.yaml
+var stratoUrl = 'http://localhost/strato-api'; //url of the strato instance that is running the blockchain, same as in config.yaml
 
 var userName = 'http-call'; //sender username
 var userAddress = '$SENDER_ADDRESS$'         ; //sender address
 
 var sendTransactionPayload = {
-  // Password of the user sending the ether. 
+  // Password of the user sending the ether.
   // Required to retrieve private key which is stored using symmetric encryption.
   password: 'httpPass',
-  // Address of the account that will receive the ether 
+  // Address of the account that will receive the ether
   toAddress: '$RECEIVER_ADDRESS$',
   // Amount of ether to send.
   value: 10

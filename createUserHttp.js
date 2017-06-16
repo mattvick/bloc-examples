@@ -5,18 +5,15 @@ const rp = require('request-promise');
  * will create another account for the user and print this address.
  */
 
-var blocUrl = '$SERVER_URL$'; //same url of our bloc-server used in config.yaml
-var stratoUrl = '$SERVER_URL$'; //url of the strato instance that is running the blockchain, same as in config.yaml
+var blocUrl = 'http://localhost/bloc/v2.1'; //same url of our bloc-server used in config.yaml
+var stratoUrl = 'http://localhost/strato-api'; //url of the strato instance that is running the blockchain, same as in config.yaml
 
 var userName = 'http-call';
-var createUserPayload = {
-  password: 'httpPass',
-  faucet:'1'
-};
+var createUserPayload = 'httpPass';
 
 var options = {
     method: 'POST',
-    uri: blocUrl + '/users/' +  userName,
+    uri: blocUrl + '/users/' +  userName + '?faucet=true',
     body: createUserPayload,
     json: true // Automatically stringifies the body to JSON
 };
@@ -27,7 +24,10 @@ rp(options).then(function(address){
    * Now we will log the details of the newly created account on the blockchain.
    * We simply pass in the address of the account we would like.
    */
-  rp(stratoUrl + '/eth/v1.2/account?address=' + address).then(console.log);
+  rp(stratoUrl + '/eth/v1.2/account?address=' + address).then((accounts) => {
+    const account = accounts[0]
+    console.log('Account balance is : ', account.balance);
+  })
 }).catch(function(err){
   console.log('an error occurred: ', err);
 });
