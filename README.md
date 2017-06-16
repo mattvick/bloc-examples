@@ -8,7 +8,7 @@ Make sure you've an instance of STRATO platform with Bloc API running.
 You can do that on your own machine or a VM using our Developer Edition: https://github.com/blockapps/strato-getting-started
 
 ### Documentation
-* `bloc-server` endpoints: http://<YOUR_STRATO_URL>/bloc/2.1/docs
+* `bloc-server` endpoints: http://<YOUR_STRATO_URL>/bloc/v2.1/docs
 * `blockapps-rest` docs: https://github.com/blockapps/blockapps-rest#bloch
 
 ### Examples included:
