@@ -1,10 +1,9 @@
 # Bloc Examples
 
-This directory contains examples on how to consume the `Bloc API`. There are examples using the `request-promise` library that demonstrate the various `GET` and `POST` routes available on the REST API. There are also examples using the `blockapps-api` library that acts as wrapper around the REST endpoints. We also have included examples using the `blockapps-rest` node library, which implements promise chaining to handle more complicated workflows.
+This directory contains examples on how to consume the `Bloc API`. There are examples using the `request-promise` library that demonstrate the various `GET` and `POST` routes available on the REST API. We also have examples of our powerful `blockapps-rest` node library, which implements promise chaining to handle more complicated workflows. If developing an application in node, we suggest using `blockapps-rest` as it keeps code clean and concise.
 
 ### Documentation
 * `bloc-server` endpoints: http://blockapps.net/bloc-server/1.2/docs
-* `blockapps-api` docs: https://github.com/blockapps/blockapps-api
 * `blockapps-rest` docs: https://github.com/blockapps/blockapps-rest#bloch
 
 ### Examples included:
@@ -21,5 +20,6 @@ This directory contains examples on how to consume the `Bloc API`. There are exa
 
 ### Instructions
   1. Run `npm install`
-  2. Open `config.yaml` and put in the appropriate `stratoUrl` and `blocUrl`
-  3. Execute `node <name-of-js-file>.js --config config.yaml` to run any of the examples.
+  2. Open `config.yaml` and put in the appropriate `stratoUrl` and `blocUrl`. If you are running [strato-gettin-started](https://github.com/blockapps/strato-getting-started), then the appropriate values are alread in place.
+  3. Execute `node <name-of-js-file>.js  --config config.yaml` to run any of the examples.
+  
