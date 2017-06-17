@@ -49,6 +49,36 @@ rp(blocUrl + '/users/' + userName).then(function(addresses) {
 
   rp(options).then(function(contractAddress){
     console.log('Address of newly created contract is: ', contractAddress);
+    // call the set method on our new contract
+
+    // already have password as password
+    // already have address as addrArray[0]
+
+    var setMethodPayload = {
+        "resolve": true,
+        "password": password,
+        "txs": [
+          {
+            "contractAddress": contractAddress,
+            "args": { "x":10
+                    },
+            "contractName": contractName,
+            "methodName": "set",
+            "value": "0"
+          }
+        ]
+    };
+
+    var optionsSet = {
+        method: 'POST',
+        uri: blocUrl + '/users/' +  userName + '/' + addrArray[0] + '/callList',
+        body: setMethodPayload,
+        json: true // Automatically stringifies the body to JSON
+    };
+
+    rp(optionsSet).then(function(methodResponse){
+      console.log('methodResponse is: ', methodResponse);
+    });
   });
 
 }).catch(function(err){

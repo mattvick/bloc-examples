@@ -26,7 +26,7 @@ rp(options).then(function(address){
    */
   rp(stratoUrl + '/eth/v1.2/account?address=' + address).then((accounts) => {
     const account = accounts[0]
-    console.log('Account balance is : ', account.balance);
+    console.log('Account balance is : ', accounts);
   })
 }).catch(function(err){
   console.log('an error occurred: ', err);
